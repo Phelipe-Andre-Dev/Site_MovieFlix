@@ -1,0 +1,14 @@
+.bnt{
+    text-decoration: none;
+    background-color:rgb(7, 182, 7);
+    color: white;
+    padding: 10px;
+   
+    font-size: 1.2em;
+    
+} 
+
+.bnt:hover{
+    background-color: green;
+
+}

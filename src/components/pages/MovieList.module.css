@@ -1,0 +1,49 @@
+.body{
+    background-color: black;
+    height:100%;
+    margin: -50px;
+   
+   
+}
+
+.div{
+    margin: -20px -20px;
+    column-gap: 2em;
+    display: flex;
+    overflow: auto;
+    flex-wrap: nowrap;
+    height:330px ;
+    padding: 30px;
+    margin: 20px 20px 20px;
+   
+   
+
+}
+
+.div h1{
+    text-align: center;
+    font-display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    align-items: center;
+}
+.img{
+    width: 200px;
+    padding: 20px 20px;
+    transition: all 0.3s;
+}
+
+.img:hover{
+    transform: scale(1.2);
+} 
+
+.h1{
+    color: red;
+}
+
+
+    
+
+
+
+

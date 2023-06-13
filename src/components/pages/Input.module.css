@@ -1,0 +1,24 @@
+.input{
+    padding: 80px;
+    margin: -20px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    display: flex;
+    column-gap: 1em;
+    height: -200px;
+    margin: -50px -50px;
+    background-image: url(/src/layout/vingadores.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+   
+   
+    
+ }
+
+.input label{
+    color: rgb(9, 246, 9);
+    font-weight: bold;
+}
+
