@@ -19,12 +19,12 @@
     background-color: black;
     color:red;
 }
-
+@media screen and (max-width:768px)
 {
     .box{
         font-size: 1.2em;
         padding: 30px;
-    }
+    } status
     .btn{
         width:1em;
     }
