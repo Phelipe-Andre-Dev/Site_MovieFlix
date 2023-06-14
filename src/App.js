@@ -40,33 +40,30 @@ function App(){
   
 
   return(
+ 
+    <BrowserRouter >
+      <Navbar/>
+      
+      
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
 
-  <BrowserRouter>
-     <Navbar/>
-    
-     
-     <Routes>
-      <Route path='/' element={<Home/>}/>
-     </Routes>
-
-     <Routes>
-      <Route path='/cadastro' element={<Cadastro/>}/>
-     </Routes>
-    
-      <div>
-      <Input searchValue={searchValue} setSearchValue={setSearchValue}/>
-        <MovieList movies={movies} />
-        
-        
-      </div>
-
-   
+      <Routes>
+        <Route path='/cadastro' element={<Cadastro/>}/>
+      </Routes>
+      
+        <div>
+        <Input searchValue={searchValue} setSearchValue={setSearchValue}/>
+          <MovieList movies={movies} />
+          
+          
+        </div>
 
     
-
-   
 
     </BrowserRouter>
+   
 
 
     

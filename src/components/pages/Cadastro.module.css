@@ -79,3 +79,23 @@
     font-weight: bold;
 }
 
+@media screen and (max-width:768px){
+    .bg{
+       
+        background-color: black;
+    }
+    .form{
+        width: 200px;
+        height: 400px;
+        align-items: center;
+        padding: 2px;
+    }
+    .form input{
+        width: 130px;
+        
+    }
+    .form label{
+        font-size: 1em;
+    }
+}
+

@@ -22,3 +22,14 @@
     font-weight: bold;
 }
 
+@media screen and (max-width:768px){
+    .input{
+        font-size: 1em;
+        
+    }
+
+    .box{
+        height: 90px;
+    }
+}
+

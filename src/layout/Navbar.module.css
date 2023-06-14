@@ -47,3 +47,24 @@
 
 
 }
+@media screen and (max-width:768px){
+    .item{
+       
+        flex-direction: column;
+        padding: 4px;
+        column-gap: 0.1em;
+    }
+
+    .list{
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        margin-left: -520px;
+        padding: 10px;
+
+    }
+
+    .img{
+        width:200px ;
+    }
+}

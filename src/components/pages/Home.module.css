@@ -20,6 +20,15 @@
     color:red;
 }
 
+{
+    .box{
+        font-size: 1.2em;
+        padding: 30px;
+    }
+    .btn{
+        width:1em;
+    }
+}
 
  
     
