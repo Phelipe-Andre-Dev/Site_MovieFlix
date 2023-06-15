@@ -41,8 +41,6 @@ function Cadastro(){
             setMsg('Senha incorreta')
             
       
-        }else{
-            setMsg('Cadastro Realizado')
         }
 
     
