@@ -15,18 +15,18 @@ function Cadastro(){
         
         
 
-        if (nome == ''){
+        if (nome === ''){
             setMsg('Digite seu nome')
             return false
         }
 
-        if(email == ''){
+        if(email === ''){
             setMsg('Digite um email')
             return false
         }
         
 
-        if (password == ''){
+        if (password === ''){
             setMsg('Digite uma senha')
             return false
         }else if (password.length < 6){
@@ -34,13 +34,15 @@ function Cadastro(){
             
         }
 
-        if(passwordtwo == ''){
+        if(passwordtwo === ''){
             setMsg('Digite uma senha')
             return false
         }else if(passwordtwo !== password ){
             setMsg('Senha incorreta')
             
       
+        }else{
+            setMsg('Cadastro Realizado')
         }
 
     
