@@ -9,10 +9,6 @@ import Navbar from './layout/Navbar'
 import Input from './components/pages/Input'
 
 
-
-
-
-
 function App(){
 
   const [movies, setMovies] = useState ([])
@@ -20,7 +16,8 @@ function App(){
 
   const getMovieRequest = async (searchValue) => {
 
-    const url =`http://www.omdbapi.com/?s=${searchValue} &apikey=${process.env.REACT_APP_API_KEY}`
+    const REACT_APP_API_KEY = "45cf5c8c"
+    const url =`http://www.omdbapi.com/?s=${searchValue}&apikey=${REACT_APP_API_KEY}`
 
     const response = await fetch(url)
     const responseJson = await response.json()
