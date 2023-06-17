@@ -16,8 +16,8 @@ function App(){
 
   const getMovieRequest = async (searchValue) => {
 
-    const REACT_APP_API_KEY = "45cf5c8c"
-    const url =`http://www.omdbapi.com/?s=${searchValue}&apikey=${REACT_APP_API_KEY}`
+    const apikey = process.env.REACT_APP_API_KEY
+    const url =`http://www.omdbapi.com/?s=${searchValue}&apikey=${apikey}`
 
     const response = await fetch(url)
     const responseJson = await response.json()
