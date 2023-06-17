@@ -1,12 +1,16 @@
-
 import React, {useState, useEffect} from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import axios from 'axios'
 import Home from './components/pages/Home'
 import Cadastro from './components/pages/Cadastro'
 import MovieList from './components/pages/MovieList'
 
 import Navbar from './layout/Navbar'
 import Input from './components/pages/Input'
+
+const api = axios.create({
+  baseURL: 'http://www.omdbapi.com'
+})
 
 
 function App(){
@@ -17,13 +21,11 @@ function App(){
   const getMovieRequest = async (searchValue) => {
 
     const apikey = process.env.REACT_APP_API_KEY
-    const url =`http://www.omdbapi.com/?s=${searchValue}&apikey=${apikey}`
 
-    const response = await fetch(url)
-    const responseJson = await response.json()
+    const { data } = await api.get(`/?s=${searchValue}&apikey=${apikey}`)
 
-    if (responseJson.Search){
-      setMovies (responseJson.Search)
+    if (data.Search){
+      setMovies (data.Search)
     }
 
   }
