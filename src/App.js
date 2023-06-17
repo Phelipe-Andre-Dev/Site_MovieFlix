@@ -9,7 +9,8 @@ import Navbar from './layout/Navbar'
 import Input from './components/pages/Input'
 
 const api = axios.create({
-  baseURL: 'http://www.omdbapi.com'
+  baseURL: 'http://www.omdbapi.com',
+  headers: {accept: 'application/json'}
 })
 
 
