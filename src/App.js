@@ -19,15 +19,6 @@ function App(){
   const [movies, setMovies] = useState ([])
   const [searchValue, setSearchValue] = useState('');
 
-  const debounce = (fn, duration) => {
-    let timer
-
-    return () => {
-      clearTimeout()
-      timer = setTimeout(fn, duration)
-    }
-  }
-
   const getMovieRequest = async (searchValue) => {
 
     const apikey = process.env.REACT_APP_API_KEY
