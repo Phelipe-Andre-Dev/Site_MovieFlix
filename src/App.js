@@ -9,7 +9,7 @@ import Navbar from './layout/Navbar'
 import Input from './components/pages/Input'
 
 const api = axios.create({
-  baseURL: 'http://www.omdbapi.com',
+  baseURL: 'https://www.omdbapi.com',
   headers: {accept: 'application/json'}
 })
 
@@ -18,6 +18,15 @@ function App(){
 
   const [movies, setMovies] = useState ([])
   const [searchValue, setSearchValue] = useState('');
+
+  const debounce = (fn, duration) => {
+    let timer
+
+    return () => {
+      clearTimeout()
+      timer = setTimeout(fn, duration)
+    }
+  }
 
   const getMovieRequest = async (searchValue) => {
 
@@ -29,7 +38,7 @@ function App(){
       setMovies (data.Search)
     }
 
-  }
+  } //Provisional Header are shown
    
   useEffect (()=> {
     getMovieRequest(searchValue);
