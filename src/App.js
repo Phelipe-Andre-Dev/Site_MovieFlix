@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import axios from 'axios'
 import Home from './components/pages/Home'
 import Cadastro from './components/pages/Cadastro'
 import MovieList from './components/pages/MovieList'
@@ -8,10 +7,7 @@ import MovieList from './components/pages/MovieList'
 import Navbar from './layout/Navbar'
 import Input from './components/pages/Input'
 
-const api = axios.create({
-  baseURL: 'https://www.omdbapi.com',
-  headers: {accept: 'application/json'}
-})
+
 
 
 function App(){
@@ -20,18 +16,22 @@ function App(){
   const [searchValue, setSearchValue] = useState('');
 
   const getMovieRequest = async (searchValue) => {
-
+    
     const apikey = process.env.REACT_APP_API_KEY
+    const url =`https://www.omdbapi.com/?s=${searchValue}&apikey=${apikey}`
 
-    const { data } = await api.get(`/?s=${searchValue}&apikey=${apikey}`)
 
-    if (data.Search){
-      setMovies (data.Search)
+    const response = await fetch(url)
+    const responseJson = await  response.json() 
+
+    if (responseJson.Search){
+      setMovies (responseJson.Search)
     }
 
-  } //Provisional Header are shown
+  }
    
-  useEffect (()=> {
+
+    useEffect (()=> {
     getMovieRequest(searchValue);
   },[searchValue]);
   
