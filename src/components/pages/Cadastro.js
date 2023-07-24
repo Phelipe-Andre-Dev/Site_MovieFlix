@@ -13,8 +13,6 @@ function Cadastro(){
     function formvalidation(e){
         e.preventDefault()
         
-        
-
         if (nome === ''){
             setMsg('Digite seu nome')
             return false
@@ -25,7 +23,6 @@ function Cadastro(){
             return false
         }
         
-
         if (password === ''){
             setMsg('Digite uma senha')
             return false
@@ -35,18 +32,20 @@ function Cadastro(){
         }
 
         if(passwordtwo === ''){
-            setMsg('Digite uma senha')
+            setMsg('Confirme sua senha')
             return false
         }else if(passwordtwo !== password ){
             setMsg('Senha incorreta')
-            
-      
+            return false
+        }else if(passwordtwo === password & password.length >= 6){
+            setMsg('Cadastro realizado corretamente!')
+            setNome('')
+            setEmail('')
+            setPassword('')
+            setPasswordtwo('')
         }
-
-    
-        // aqui chamariamos a api para receber os dados do formulario
         
-    }
+}
 
     return(
         <form className={styles.bg}>
