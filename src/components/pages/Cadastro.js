@@ -9,6 +9,7 @@ function Cadastro(){
     const [passwordtwo, setPasswordtwo] = useState('')
 
     const [msg, setMsg] = useState ('')
+    const [msgok, setMsgok] = useState ('')
 
     function formvalidation(e){
         e.preventDefault()
@@ -38,13 +39,15 @@ function Cadastro(){
             setMsg('Senha incorreta')
             return false
         }else if(passwordtwo === password & password.length >= 6){
-            setMsg('Cadastro realizado corretamente!')
+            setMsgok('Cadastro realizado corretamente!')
+            setMsg('')
             setNome('')
             setEmail('')
             setPassword('')
             setPasswordtwo('')
+            
         }
-        
+      
 }
 
     return(
@@ -64,6 +67,7 @@ function Cadastro(){
                 <label className={styles.item}>Confirmar senha</label>
                 <input type='password' name='passwordtwo' placeholder='Confirme sua senha' value={passwordtwo} onChange={(e) => setPasswordtwo (e.target.value)} />
                 <div ><alert>{msg}</alert></div>
+                <div className={styles.msgok} ><alert>{msgok}</alert></div>
                 <button type='submit' onClick={formvalidation}>Enviar</button>
             </div>
         </form>
